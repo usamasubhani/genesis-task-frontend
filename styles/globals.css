@@ -1,0 +1,121 @@
+:root {
+  --page-bg-color: #0d2436;
+  --text-color: #ffffff;
+  --hover-text-color: #cccccc;
+  --primary-color: #009b86;
+  --hover-bg-color: #34ac9c;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--page-bg-color);
+  color: var(--text-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.container {
+  width: 100%;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+[class*="col"] {
+  display: flex;
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+@media (max-width: 576px) {
+  .col-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .col-sm-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+.justify-center {
+  justify-content: center !important;
+}
