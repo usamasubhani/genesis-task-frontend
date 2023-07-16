@@ -10,12 +10,7 @@ const Awards = () => {
   const [categories, setCategories] = useState<CategoryInterface[]>();
   const [openModal, setOpenModal] = useState(false);
 
-  const selectNominee = (
-    categoryId: string,
-    nomineeId: string,
-    unselect = false
-  ) => {
-    console.log(unselect);
+  const selectNominee = (categoryId: string, nomineeId: string) => {
     const updatedCategories = categories?.map((category) => {
       if (category.selected === nomineeId) category.selected = null;
       else if (category.id === categoryId) category.selected = nomineeId;
@@ -50,7 +45,6 @@ const Awards = () => {
                       <Nominee
                         item={nominee}
                         selected={category.selected === nominee.id}
-                        // onSelect={() => console.log(category.id, nominee.id)}
                         onSelect={() => selectNominee(category.id, nominee.id)}
                       />
                     </div>
